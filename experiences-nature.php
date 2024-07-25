@@ -41,7 +41,7 @@
                     </div>
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="lesmaisons.php">Les maisons</a></li>
-                    <li><a href="">Maison des Expériences nature</a></li>
+                    <li><a href="experiences-nature.php">Maison des Expériences nature</a></li>
                     <li><a href="">Le journal</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
@@ -76,31 +76,69 @@
     <!-- ICI  partie qui scrolle -->
     <div class="bg-texture container">
         <main>
-            <section id="goExperiences" class="link-bottom">
-                <img class="bg-img" src="assets/img/content/goExperiences.png" alt="">
-                <div class="text-content">
-                    <h3>Maison des expériences Nature</h3>
-                    <img src="assets/img/content/arrow-link.svg" alt="">
-                </div>
+            <section class="link-bottom">
+                <img class="bg-img" src="assets/img/content/experiences-header.png" alt="">
+
             </section>
 
             <section class="slider-seasons">
+                <div class="bg-content">
+                    <img class="img-season active" src="assets/img/content/hiver.png" alt="">
+                    <img class="img-season" src="assets/img/content/printemps.png" alt="">
+                    <img class="img-season" src="assets/img/content/ete.png" alt="">
+                    <img class="img-season" src="assets/img/content/automne.png" alt="">
+                </div>
                 <div class="text-content">
                     <h3>Maison des expériences Nature</h3>
                     <p>Découvrez les autres saisons</p>
                     <div class="cta-slider">
-                        <p>Hiver</p>
-                        <p>Printemps</p>
-                        <p>Été</p>
-                        <p>Automne</p>
+                        <p class="button-season active">Hiver</p>
+                        <p class="button-season">Printemps</p>
+                        <p class="button-season">Été</p>
+                        <p class="button-season">Automne</p>
+                    </div>
+                </div>
+            </section>
+            <section class="blason-section">
+                <h2>Le rucher a pour vocation de vous proposer toutes les activités du Val d’Hérens, de la plus
+                    classique à la plus excentrique; de la plus accessible à la plus engagée</h2>
+                <img src="assets/img/content/blason.png" alt="">
+            </section>
+            <section class="panorama-scroll-block full-height" id="sectionPin2">
+                <div class="pin-wrapBis panorama-content">
+                    <div class="panorama-element">
+                        <img src="assets/img/content/panoA.png" alt="" />
+                    </div>
+                    <div class="panorama-element">
+                        <img src="assets/img/content/panoB.png" alt="" />
+                    </div>
+                    <div class="panorama-element">
+                        <img src="assets/img/content/panoC.png" alt="" />
+                    </div>
+                    <div class="panorama-element">
+                        <img src="assets/img/content/panoD.png" alt="" />
+                    </div>
+                    <div class="panorama-element">
+                        <img src="assets/img/content/panoE.png" alt="" />
                     </div>
                 </div>
             </section>
 
+            <section class="text-slider-section">
+                <div class="text-slider-section-part">
+                    <img class="bee-top" src="assets/img/content/bee-exp.png" alt="">
+                    <h3 class="rucherFont">L’hotel central a retrouvé son toit.</h3>
+                    <p>C’est maintenant hors d’eau que l’agencement intérieur va être façonné pour écrire la nouvelle page de l’histoire de ce bâtiment iconique du village. Les maître-mots de cette nouvelle rénovation : authenticité, charme et confort.</p>
+                </div>
+                <div class="text-slider-section-part">
+
+                </div>
+            </section>
+            
             <section id="goContact" class="link-bottom">
                 <div class="text-content">
-                    <h3>Contactz-nous</h3>
-                    <img src="assets/img/content/arrow-link.svg" alt="">
+                    <h3>Contactez-nous</h3>
+                    <img src="assets/img/content/arrow-link-black.svg" alt="">
                 </div>
             </section>
     </div>

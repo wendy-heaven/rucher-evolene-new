@@ -24,7 +24,6 @@ window.addEventListener("load", function () {
 			sliderV2.mount();
 		});
 	}
-
 	///////////// SMOOTH SCROLL //////////////
 	if (document.querySelector(".container")) {
 		const pageContainer = document.querySelector(".container");
@@ -68,7 +67,6 @@ window.addEventListener("load", function () {
 			// Function to handle opening the video popin
 			document.body.addEventListener('click', function (e) {
 				if (e.target.closest('.js-open-popin-video')) {
-					console.log("click");
 					e.preventDefault();
 					const name = e.target.closest('.js-open-popin-video').getAttribute('data-popin');
 					const popinContainer = document.querySelector('.js-popincontainer');
@@ -128,7 +126,6 @@ window.addEventListener("load", function () {
 			});
 
 		}
-
 		if (document.querySelector(".pin-item")) {
 			// Create the animation
 			let animation = gsap.fromTo(".pin-wrapper",
@@ -346,7 +343,6 @@ window.addEventListener("load", function () {
 				start: 'top top',
 				end: 'bottom bottom',
 				onEnter: () => {
-					console.log("here")
 					nav.classList.add("open");
 					setTimeout(function () {
 						navExpanded.classList.add("open");
@@ -365,7 +361,6 @@ window.addEventListener("load", function () {
 					xhr.send();
 				},
 				onLeaveBack: () => {
-					console.log("here2")
 					nav.classList.remove("open");
 					setTimeout(function () {
 						navExpanded.classList.remove("open");
@@ -377,7 +372,6 @@ window.addEventListener("load", function () {
 		}
 
 		if (document.querySelector('#goExperiences')) {
-			console.log("here exper")
 			const goExperiencesSection = document.querySelector('#goExperiences');
 
 			// Create a ScrollTrigger instance for the section
@@ -387,7 +381,6 @@ window.addEventListener("load", function () {
 				start: 'top top',
 				end: 'bottom bottom',
 				onEnter: () => {
-					console.log("here")
 					nav.classList.add("open");
 					setTimeout(function () {
 						navExpanded.classList.add("open");
@@ -406,7 +399,6 @@ window.addEventListener("load", function () {
 					xhr.send();
 				},
 				onLeaveBack: () => {
-					console.log("here2")
 					nav.classList.remove("open");
 					setTimeout(function () {
 						navExpanded.classList.remove("open");
@@ -415,6 +407,91 @@ window.addEventListener("load", function () {
 				},
 
 			});
+		}
+
+		if (document.querySelector('.slider-seasons')) {
+
+			const imagesSeason = document.querySelectorAll('.img-season');
+			const totalSteps = imagesSeason.length;
+			const container = document.querySelector('.slider-seasons');
+			const heightToScroll = window.innerHeight * 5;
+			const buttonsSeason = document.querySelectorAll('.button-season')
+			const pageContainer = document.querySelector('.container'); // Assurez-vous que .container est défini dans votre HTML
+			// Épingler la section pendant le défilement
+			ScrollTrigger.create({
+				scroller: pageContainer,
+				trigger: container,
+				start: "top top",
+				end: `+=${heightToScroll} `,
+				pin: true,
+				pinSpacing: true,
+				scrub: 0.5,
+			});
+
+
+			const tlImage = gsap.timeline({
+				scrollTrigger: {
+					scroller: pageContainer,
+					trigger: container,
+					start: "top top",
+					end: `+=${ window.innerHeight * 4}`,
+					scrub: true,
+				}
+			});
+			tlImage.fromTo(imagesSeason[0], { opacity: 1 }, {
+				opacity: 1, duration: 1
+			}, "0")
+				.to(imagesSeason[0], {
+					opacity: 0, duration: 1, onComplete: function () {
+						buttonsSeason[0].classList.remove('active');
+						buttonsSeason[1].classList.add('active');
+					}
+				}, window.innerHeight);
+
+			tlImage.fromTo(imagesSeason[1], { opacity: 0 }, {
+				opacity: 1, duration: 1
+			}, window.innerHeight)
+				.to(imagesSeason[1], {
+					opacity: 0, duration: 1, onComplete: function () {
+						buttonsSeason[1].classList.remove('active');
+						buttonsSeason[2].classList.add('active');
+					}
+				}, window.innerHeight * 2);
+
+			tlImage.fromTo(imagesSeason[2], { opacity: 0 }, {
+				opacity: 1, duration: 1
+			}, window.innerHeight * 2)
+				.to(imagesSeason[2], {
+					opacity: 0, duration: 1, onComplete: function () {
+						buttonsSeason[2].classList.remove('active');
+						buttonsSeason[3].classList.add('active');
+					}
+				}, window.innerHeight * 3);
+
+			tlImage.fromTo(imagesSeason[3], { opacity: 0 }, {
+				opacity: 1, duration: 1
+			}, window.innerHeight * 3);
+		}
+		if (document.querySelector(".pin-wrapBis")) {
+			let pinWrap = document.querySelector(".pin-wrapBis");
+			let pinWrapWidth = pinWrap.offsetWidth;
+			let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+			console.log("here", pinWrapWidth, window.innerWidth, horizontalScrollLength)
+			// Pinning and horizontal scrolling
+			gsap.to(".pin-wrapBis", {
+				scrollTrigger: {
+					scroller: pageContainer, // locomotive-scroll
+					scrub: 0.5,
+					trigger: "#sectionPin2",
+					pin: true,
+					start: "top top",
+					end: () => `+=${pinWrapWidth }`,
+				},
+				x: -horizontalScrollLength,
+				ease: "none",
+			});
+
+
 		}
 		////////////////////////////////////
 		scroller.on("call", (value) => {
@@ -425,10 +502,8 @@ window.addEventListener("load", function () {
 					}
 				}
 			} else if (value === "video-border-block") {
-				console.log("video-border-block");
 				document.querySelector(".video-border-background .border-animation").classList.add("animate");
 			} else if (value === "video-border-block-back") {
-				console.log("video-border-block-back");
 				document.querySelector(".video-border-background .border-animation").classList.remove("animate");
 			}
 		});
@@ -477,10 +552,8 @@ window.addEventListener("load", function () {
 	if (document.querySelector("#allHouses")) {
 		var areas = document.querySelectorAll('#allHouses area');
 		var houseImage = document.querySelector('.house-zone');
-		// console.log(areas)
 		areas.forEach(function (area) {
 			area.addEventListener('mouseover', function () {
-				console.log('hover', area)
 				var houseNumber = this.alt.split(' ')[1]; // Get the house number from the alt attribute
 				houseImage.src = 'assets/img/content/house' + houseNumber + '.png'; // Change the image source
 				houseImage.style.opacity = 1; // Set the opacity to 1
@@ -491,7 +564,6 @@ window.addEventListener("load", function () {
 			});
 			area.addEventListener('click', function (event) {
 				event.preventDefault(); // Prevent the default action (navigation)
-				console.log("click")
 				var houseNumber = this.alt.split(' ')[1]; // Get the house number from the alt attribute
 				var popin = document.getElementById('popin-house-' + houseNumber); // Get the corresponding popin
 
