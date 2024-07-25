@@ -1,0 +1,57 @@
+{
+  "path": {
+    "intro": {
+      "title": "trouvez le cadeau idéal",
+      "btnTxt": "commencer"
+    },
+    "question1": {
+      "question": "Ce cadeau Paco est…",
+      "answers": ["pour elle", "pour lui"]
+    },
+    "question2": {
+      "question": "Pour cette personne, vous êtes prêt à offrir… ",
+      "label": "Faîtes glisser pour choisir votre cadeau",
+      "answers": [
+        "Un beau cadeau, en-dessous de 75€",
+        "Un merveilleux cadeau, entre 75 et 100€",
+        "Un incroyable cadeau, au-dessus de 100€"
+      ]
+    },
+    "question3": {
+      "question": "Quel type de cadeau pourrait lui plaire&nbsp;?",
+      "answers": ["Un produit unique", "Un coffret"]
+    },
+    "question4": {
+      "question": "Quel mot décrit le mieux sa personnalité&nbsp;?",
+      "answers": ["Sophistiquée", "Audacieuse", "Sensuelle", "Mystérieuse"]
+    },
+    "end": {
+      "title": "le cadeau idéal est"
+    }
+  },
+  "result": {
+    "hero": {
+      "subtitle": "le cadeau idéal est",
+      "btn1Txt": "Découvrir",
+      "btn2Txt": "Essayer de nouveau",
+      "btn2Url": "https://www.pacorabanne.com/fr/fr/christmas-gift-finder"
+    },
+    "sectionList": {
+      "title": "d'autres idées cadeaux",
+      "btnTxt": "Découvrir",
+      "surtitle": "nouveauté"
+    },
+    "footer": [
+      {
+        "title": "L'art d'offrir",
+        "btnTxt": "Découvrir",
+        "btnLink": "https://www.pacorabanne.com/fr/fr/art-ofgifting"
+      },
+      {
+        "title": "Nos avantages en ligne",
+        "btnTxt": "Découvrir",
+        "btnLink": "https://www.pacorabanne.com/fr/fr/online-benefits"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+.panorama-scroll-block {
+	height: 100vh;
+	padding-top: 5vh;
+	.panorama-content {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: max-content;
+	}
+	.panorama-element {
+		flex-shrink: 0;
+		position: relative;
+		
+		img {
+			height: 75vh;
+			width: auto;
+			object-fit: contain;
+		}
+		&:first-of-type {
+			img {
+				margin-left: $block-margin-small;
+			}
+		}
+	}
+}
+.fioriture {
+	position: absolute;
+	bottom: 5vh;
+	right: 0;
+	height: 160px;
+	width: auto;
+		
+}
+// #sectionPin {
+// 	height: 100vh;
+// 	overflow: hidden;
+// 	display: flex;
+// 	left: 0;
+// 	background: var(--text-color);
+// 	color: var(--bg-color);
+
+// }
+
+// .pin-wrap {
+// 	height: 100vh;
+// 	display: flex;
+// 	justify-content: flex-start;
+// 	align-items: center;
+// 	padding: 50px 10vw;
+
+// 	& > * {
+// 		min-width: 60vw;
+// 		padding: 0 5vw;
+// 	}
+// }

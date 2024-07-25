@@ -1,0 +1,44 @@
+footer {
+	margin: $block-margin-supersmall;
+	border-top: 1px solid $black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	height: 170px;
+	@include xs-breakpoint {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+		padding-bottom: 5vw;
+	}
+	.footer-logo {
+		padding-top: 15px;
+		height: 80px;
+		width: auto;
+		@include xs-breakpoint {
+			height: 100px;
+			margin-top: 5vw;
+			margin-bottom: 5vw;
+		}
+	}
+	.footer-links,
+	.footer-social {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		@include xs-breakpoint {
+			margin-bottom: 5vw;
+		}
+		li {
+			margin: 0 15px;
+		}
+	}
+    
+	.footer-links {
+		@include xs-breakpoint {
+			flex-direction: column;
+		}
+	}
+}

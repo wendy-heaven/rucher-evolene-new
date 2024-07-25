@@ -1,0 +1,57 @@
+{
+  "path": {
+    "intro": {
+      "title": "find the perfect gift",
+      "btnTxt": "find"
+    },
+    "question1": {
+      "question": "This paco gift is...",
+      "answers": ["for her", "for him"]
+    },
+    "question2": {
+      "question": "For this person your are ready to do...",
+      "label": "drag and drop to choose your gift",
+      "answers": [
+        "A beautiful gift, under 55£",
+        "A gift between 56£ and 80£",
+        "An incredible gift, above 80£"
+      ]
+    },
+    "question3": {
+      "question": "What type of gift would be perfect ?",
+      "answers": ["product", "gifset"]
+    },
+    "question4": {
+      "question": "The best word to describe this person:",
+      "answers": ["sophisticated", "adventurous", "sensual", "mysterious"]
+    },
+    "end": {
+      "title": "your perfect gift is..."
+    }
+  },
+  "result": {
+    "hero": {
+      "subtitle": "your perfect gift is",
+      "btn1Txt": "discover",
+      "btn2Txt": "try again",
+      "btn2Url": "https://www.pacorabanne.com/uk/en/christmas-gift-finder"
+    },
+    "sectionList": {
+      "title": "other perfect gifts",
+      "btnTxt": "discover",
+      "surtitle": "nouveauté"
+    },
+    "footer": [
+      {
+        "title": "the art of gifting",
+        "btnTxt": "discover",
+        "btnLink": "https://www.pacorabanne.com/uk/en/art-ofgifting"
+      },
+      {
+        "title": "online<br />benefits",
+        "btnTxt": "discover",
+        "btnLink": "https://www.pacorabanne.com/uk/en/online-benefits"
+      }
+    ]
+  }
+}

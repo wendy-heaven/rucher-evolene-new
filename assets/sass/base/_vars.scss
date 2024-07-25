@@ -1,0 +1,33 @@
+/**
+ * Variables
+*/
+
+/* Typography */
+$font-family: 'DM Sans', sans-serif;
+$font-size-base: 18px;
+/* Breakpoints */
+/* Paths */
+/* Grid setup */
+$block-margin: 15vw;
+$block-margin-small: 10vw;
+$block-margin-supersmall: 6vw;
+
+/* Colour palette */
+$black: #000;
+$white: #fff;
+$light-gray: #f1f1f1;
+
+$body-background-color: #333;
+$foreground-color: #BF9E8C;
+$foreground-color-opacity: rgba(197,156,137,0.9);
+$caption-color: #464646;
+$accent-color: #A2C49C;
+$link-color: #ec1f4e;
+$green: #6EAA64;
+/* Components */
+
+$xsBreakpoint: 576px;
+$smBreakpoint: 768px;
+$mdBreakpoint: 1024px;
+$lgBreakpoint: 1290px;
+$xlBreakpoint: 1440px;

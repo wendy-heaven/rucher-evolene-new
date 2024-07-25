@@ -1,0 +1,47 @@
+/* By Athlon Front-End Team */
+
+/* Core variables */
+@import 'base/vars';
+
+/* CSS Reset */
+@import 'base/reset';
+
+/* CSS print */
+@import 'base/print';
+
+/* Fonts */
+@import 'base/fonts';
+
+/* Mixins, helpers and functions */
+@import 'base/mixins';
+
+/* Common styles */
+@import 'base/common';
+
+/* Vendor */
+
+/* Components */
+@import 'components/navigation';
+@import 'components/summary';
+@import 'components/hero';
+@import 'components/text-slider-block';
+@import 'components/text-slider-small-block';
+@import 'components/text-imgPile-block';
+@import 'components/panorama-scroll-block';
+@import 'components/portrait-block';
+@import 'components/text-image-block';
+@import 'components/button';
+@import 'components/footer';
+@import 'components/full-width-img';
+@import 'components/pin-block';
+@import 'components/video-border_block';
+@import 'components/houses-block';
+@import 'components/allHouses';
+@import 'components/slider-seasons';
+
+/* Browser specific styles */
+@import 'dirty/hacks';
+
+@import'base/locomotiv';
+
+

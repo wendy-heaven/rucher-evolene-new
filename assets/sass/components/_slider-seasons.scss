@@ -1,0 +1,27 @@
+.slider-seasons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  position: relative;
+  .text-content {
+    position: absolute;
+    width: 50%;
+    h3 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 72px;
+      text-align: center;
+      color: #ffffff;
+    }
+    p {
+        color: #ffffff;
+    }
+    &:first-of-type {
+        p {
+            color: #1e0f00; 
+        }
+    }
+  }
+}

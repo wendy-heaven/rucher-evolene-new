@@ -1,0 +1,65 @@
+.text-image-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  position: relative;
+  padding: 10vh 0;
+}
+
+.text-container,
+.image-container {
+  width: 50%;
+  position: relative;
+  height: 100%;
+}
+.text-container {
+  padding-left: 5vw;
+
+  p {
+    font-size: 55px;
+  }
+}
+.image-container {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+  }
+}
+.text-step,
+.image-step {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.text-step {
+  font-weight: 600;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.image-step {
+  height: 100%;
+  width: 100%;
+  padding-right: 10%;
+  top: 0;
+  left: 0;
+}
+
+.text-step:first-child,
+.image-step:first-child {
+  opacity: 1;
+}
+#step1 {
+  top: 0;
+  font-weight: 400;
+}
+#image2 {
+  top: 0;
+  left: 15%;
+  width: 67%;
+}
+#image7 {
+    width: 80%;
+}
