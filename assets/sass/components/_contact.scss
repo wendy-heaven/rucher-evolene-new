@@ -74,7 +74,7 @@
   content: "✓"; /* Caractère de coche */
   color: white; /* Couleur blanche pour la coche */
   position: absolute; /* Position absolue pour centrer la coche */
-  left: 4px; /* Position horizontale de la coche */
+  left: 2px; /* Position horizontale de la coche */
   top: -2px; /* Position verticale de la coche */
   font-size: 16px; /* Taille de la coche */
 }
@@ -107,7 +107,10 @@ form .checkbox label {
   width: 40%;
   padding-left: 3vw;
   box-sizing: border-box;
-
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
 .instagram-feed .feed {
