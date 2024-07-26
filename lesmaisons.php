@@ -88,12 +88,24 @@
             <section id="allHouses">
                 <img class="houses-bg" src="assets/img/content/allHouses1.png" alt="" usemap="#houses-map">
 
-                <map name="houses-map" id="houses-map">
+                <!-- <map name="houses-map" id="houses-map">
                     <area target="" alt="House 1" coords="474,432,75" shape="circle"></area>
                     <area target="" alt="House 2" coords="821,470,70" shape="circle"></area>
                     <area target="" alt="House 3" coords="932,292,86" shape="circle"></area>
-                </map>
+                </map> -->
+                <svg id="houses-map" style="width:100%" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 870">
 
+                    <circle cx="474.52991452991455" cy="432.13675213675214" r="75.85738529016703"
+                        class="image-mapper-shape" data-index="1" fill-opacity="0"></circle>
+
+                    <circle cx="821.8803418803419" cy="470.42735042735035" r="70.64938859809622"
+                        class="image-mapper-shape" data-index="2" fill-opacity="0"></circle>
+
+                    <circle cx="932.6495726495727" cy="292.6495726495727" r="86.42475382878625"
+                        class="image-mapper-shape" data-index="3" fill-opacity="0"></circle>
+
+                </svg>
                 <img class="house-zone" src="assets/img/content/house1.png" alt="">
 
             </section>

@@ -8,7 +8,12 @@
   width: 100vw;
   height: auto;
 }
-area {
+#houses-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+circle {
   cursor: pointer;
 }
 

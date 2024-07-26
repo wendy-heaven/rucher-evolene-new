@@ -641,11 +641,11 @@ window.addEventListener("load", function () {
 		}
 	}
 	if (document.querySelector("#allHouses")) {
-		var areas = document.querySelectorAll('#allHouses area');
+		var areas = document.querySelectorAll('#allHouses circle');
 		var houseImage = document.querySelector('.house-zone');
 		areas.forEach(function (area) {
 			area.addEventListener('mouseover', function () {
-				var houseNumber = this.alt.split(' ')[1]; // Get the house number from the alt attribute
+				var houseNumber = this.dataset.index; // Get the house number from the data-index attribute
 				houseImage.src = 'assets/img/content/house' + houseNumber + '.png'; // Change the image source
 				houseImage.style.opacity = 1; // Set the opacity to 1
 			});
@@ -655,7 +655,7 @@ window.addEventListener("load", function () {
 			});
 			area.addEventListener('click', function (event) {
 				event.preventDefault(); // Prevent the default action (navigation)
-				var houseNumber = this.alt.split(' ')[1]; // Get the house number from the alt attribute
+				var houseNumber = this.dataset.index; // Get the house number from the data-index attribute
 				var popin = document.getElementById('popin-house-' + houseNumber); // Get the corresponding popin
 				popin.style.display = 'block'; // Show the popin
 				setTimeout(() => {
