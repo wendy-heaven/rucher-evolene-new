@@ -43,7 +43,7 @@
                     <li><a href="lesmaisons.php">Les maisons</a></li>
                     <li><a href="experiences-nature.php">Maison des Expériences nature</a></li>
                     <li><a href="">Le journal</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
             <!-- <ul class="menu-links">
@@ -90,12 +90,12 @@
                 </div>
                 <div class="text-content">
                     <h3>Maison des expériences Nature</h3>
-                    <p>Découvrez les autres saisons</p>
+                    <p id="text-discover" class="first">Découvrez les autres saisons</p>
                     <div class="cta-slider">
-                        <p class="button-season active">Hiver</p>
-                        <p class="button-season">Printemps</p>
-                        <p class="button-season">Été</p>
-                        <p class="button-season">Automne</p>
+                        <p class="button-season active first">Hiver</p>
+                        <p class="button-season first">Printemps</p>
+                        <p class="button-season first">Été</p>
+                        <p class="button-season first">Automne</p>
                     </div>
                 </div>
             </section>
@@ -124,25 +124,38 @@
                 </div>
             </section>
 
-            <section class="text-slider-section">
+            <section id="text-slider-section-pin" class="text-slider-section">
+
                 <div class="text-slider-section-part">
                     <img class="bee-top" src="assets/img/content/bee-exp.png" alt="">
                     <h3 class="rucherFont">L’hotel central a retrouvé son toit.</h3>
-                    <p>C’est maintenant hors d’eau que l’agencement intérieur va être façonné pour écrire la nouvelle page de l’histoire de ce bâtiment iconique du village. Les maître-mots de cette nouvelle rénovation : authenticité, charme et confort.</p>
+                    <p>C’est maintenant hors d’eau que l’agencement intérieur va être façonné pour écrire la nouvelle
+                        page de l’histoire de ce bâtiment iconique du village. Les maître-mots de cette nouvelle
+                        rénovation : authenticité, charme et confort.</p>
                 </div>
                 <div class="text-slider-section-part">
+                    <div class="slider-diag-content">
+                        <img src="assets/img/content/slider-diag1.png" alt="">
+                        <img src="assets/img/content/slider-diag2.png" alt="">
+                    </div>
 
                 </div>
+
+                <div class="bee-part">
+                    <img src="assets/img/content/bee-exp.png" alt="">
+                </div>
             </section>
-            
+
+
+
             <section id="goContact" class="link-bottom">
                 <div class="text-content">
                     <h3>Contactez-nous</h3>
                     <img src="assets/img/content/arrow-link-black.svg" alt="">
                 </div>
             </section>
+        </main>
     </div>
-    </main>
 </body>
 
 </html>

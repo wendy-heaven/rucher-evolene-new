@@ -23,6 +23,11 @@
 </head>
 
 <body>
+  <div id="loading-page" style="">
+    <img src="assets/img/content/logo-black.svg" alt="Loading Logo" style="width: 150px; height: auto;">
+  </div>
+
+ 
   <nav>
     <div class="navigation-expanded">
       <!-- <img
@@ -43,7 +48,7 @@
           <li><a href="lesmaisons.php">Les maisons</a></li>
           <li><a href="experiences-nature.php">Maison des Expériences nature</a></li>
           <li><a href="">Le journal</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </div>
       <!-- <ul class="menu-links">

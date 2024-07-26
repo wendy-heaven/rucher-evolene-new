@@ -1,7 +1,7 @@
 body {
-    font-size: $font-size-base;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
+  font-size: $font-size-base;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
 }
 
 .full-height {
@@ -13,110 +13,121 @@ body {
 }
 
 .small-width {
+  margin: auto;
+  width: 70vw;
+  @include xs-breakpoint {
     margin: auto;
-    width: 70vw;
-    @include xs-breakpoint {
-        margin: auto;
-        width: 100vw;
-    }
+    width: 100vw;
+  }
 }
 
 .bg-texture {
-    background-image: url(../img/content/bg-texture.png);
-    background-repeat: repeat;
+  background-image: url(../img/content/bg-texture.png);
+  background-repeat: repeat;
 }
 
 .bg-color {
-    background-color: $foreground-color;
+  background-color: $foreground-color;
 }
 .floating-img {
-    height: 100%;
-    width: auto;
-    // opacity: 0.5;
-    // transform: scale(0.5);
-    transition: all 2s ease-in-out;
-    transform-origin: left top;
-} 
+  height: 100%;
+  width: auto;
+  // opacity: 0.5;
+  // transform: scale(0.5);
+  transition: all 2s ease-in-out;
+  transform-origin: left top;
+}
 .wrapper-floating-img {
-    position: absolute;
-    top: 0;
-    height: 30vh;
-    min-height: 350px;
+  position: absolute;
+  top: 0;
+  height: 30vh;
+  min-height: 350px;
+  @include xs-breakpoint {
+    height: 50vw;
+    min-height: unset;
+  }
+  &.floating-img-left {
+    left: -6%;
     @include xs-breakpoint {
-        height: 50vw;
-        min-height: unset;
+      left: -13%;
     }
-    &.floating-img-left {
-        left: -6%;
-        @include xs-breakpoint {
-            left: -13%;
-        }
+  }
+  &.floating-img-right {
+    right: -2%;
+    top: -7%;
+    height: 58vh;
+    transform-origin: right top;
+    @include xs-breakpoint {
+      height: 50vw;
+      min-height: unset;
+      top: 0;
     }
-    &.floating-img-right {
-        right: -2%;
-        top: -7%;
-        height: 58vh;
-        transform-origin: right top;
-        @include xs-breakpoint {
-            height: 50vw;
-            min-height: unset;
-            top: 0;
-        }
+  }
+  &.is-inview {
+    .floating-img {
+      // opacity: 1;
+      // transform: scale(1);
     }
-    &.is-inview {
-        .floating-img {
-            // opacity: 1;
-            // transform: scale(1);
-        }
-    }
+  }
 }
 
-
-
-html.has-scroll-smooth 
-{
-    overflow: hidden;
-    // position: fixed;
-    // left: 0;
-    // right: 0;
-    // top: 0;
-    // bottom: 0;  
+html.has-scroll-smooth {
+  overflow: hidden;
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  // top: 0;
+  // bottom: 0;
 }
 
 .rucherFont {
-    font-family: 'Rucher-Regular';
-    font-size: 70px;
-    margin-bottom: 20px;
-    line-height: 1;
+  font-family: "Rucher-Regular";
+  font-size: 70px;
+  margin-bottom: 20px;
+  line-height: 1;
+  @include xs-breakpoint {
+    font-size: 12vw;
+  }
+  &.center {
+    text-align: center;
+    width: 60vw;
+    margin: auto;
     @include xs-breakpoint {
-        font-size: 12vw;
+      width: 80vw;
     }
-    &.center {
-        text-align: center;
-        width: 60vw;
-        margin: auto;
-        @include xs-breakpoint {
-            width: 80vw;
-        }
-    }
+  }
 }
 h3.text-big-sansserif {
-    font-weight: 500;
-    font-size: 70px;
-    @include xs-breakpoint {
-        font-size: 12vw;
-    }
+  font-weight: 500;
+  font-size: 70px;
+  @include xs-breakpoint {
+    font-size: 12vw;
+  }
 }
 .splide__pagination {
-    bottom: 2rem !important;
-    .splide__pagination__page {
-        height: 15px;
-        width: 15px;
-        margin: 15px;
-    }
-    .splide__pagination__page.is-active {
-        background-color: $white;
-        opacity: 0.9;
-        transform: none;
-    }
+  bottom: 2rem !important;
+  .splide__pagination__page {
+    height: 15px;
+    width: 15px;
+    margin: 15px;
+  }
+  .splide__pagination__page.is-active {
+    background-color: $white;
+    opacity: 0.9;
+    transform: none;
+  }
+}
+
+#loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 1;
 }

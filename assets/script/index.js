@@ -2,6 +2,13 @@
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", function () {
+	const loadingPage = document.getElementById('loading-page');
+	if (loadingPage) {
+		loadingPage.style.opacity = 0;
+		setTimeout(() => {
+			loadingPage.style.display = 'none';
+		}, 2000);
+	}
 	///////////// SLIDERS //////////////
 	if (document.querySelector(".splide")) {
 		const sliders = document.querySelectorAll(".splide");
@@ -388,7 +395,7 @@ window.addEventListener("load", function () {
 					// INSERT_YOUR_CODE
 
 					const xhr = new XMLHttpRequest();
-					xhr.open('GET', 'lesmaisons.php', true);
+					xhr.open('GET', 'experiences-nature.php', true);
 					xhr.onreadystatechange = function () {
 						if (xhr.readyState === 4 && xhr.status === 200) {
 							setTimeout(() => {
@@ -408,6 +415,7 @@ window.addEventListener("load", function () {
 
 			});
 		}
+
 
 		if (document.querySelector('.slider-seasons')) {
 
@@ -434,7 +442,7 @@ window.addEventListener("load", function () {
 					scroller: pageContainer,
 					trigger: container,
 					start: "top top",
-					end: `+=${ window.innerHeight * 4}`,
+					end: `+=${window.innerHeight * 4}`,
 					scrub: true,
 				}
 			});
@@ -445,6 +453,17 @@ window.addEventListener("load", function () {
 					opacity: 0, duration: 1, onComplete: function () {
 						buttonsSeason[0].classList.remove('active');
 						buttonsSeason[1].classList.add('active');
+						document.getElementById("text-discover").classList.remove('first')
+						buttonsSeason.forEach((button) => {
+							button.classList.remove('first')
+						})
+					}, onReverseComplete: function () {
+						buttonsSeason[1].classList.remove('active');
+						buttonsSeason[0].classList.add('active');
+						buttonsSeason.forEach((button) => {
+							button.classList.add('first')
+						})
+						document.getElementById("text-discover").classList.add('first')
 					}
 				}, window.innerHeight);
 
@@ -455,6 +474,9 @@ window.addEventListener("load", function () {
 					opacity: 0, duration: 1, onComplete: function () {
 						buttonsSeason[1].classList.remove('active');
 						buttonsSeason[2].classList.add('active');
+					}, onReverseComplete: function () {
+						buttonsSeason[2].classList.remove('active');
+						buttonsSeason[1].classList.add('active');
 					}
 				}, window.innerHeight * 2);
 
@@ -465,6 +487,9 @@ window.addEventListener("load", function () {
 					opacity: 0, duration: 1, onComplete: function () {
 						buttonsSeason[2].classList.remove('active');
 						buttonsSeason[3].classList.add('active');
+					}, onReverseComplete: function () {
+						buttonsSeason[3].classList.remove('active');
+						buttonsSeason[2].classList.add('active');
 					}
 				}, window.innerHeight * 3);
 
@@ -485,13 +510,79 @@ window.addEventListener("load", function () {
 					trigger: "#sectionPin2",
 					pin: true,
 					start: "top top",
-					end: () => `+=${pinWrapWidth }`,
+					end: () => `+=${pinWrapWidth}`,
 				},
 				x: -horizontalScrollLength,
 				ease: "none",
 			});
+		}
+		if (document.querySelector(".text-slider-section")) {
+			let imagesSlider = document.querySelectorAll('.slider-diag-content img')
 
 
+			let animation = gsap.fromTo(imagesSlider[1],
+				{ left: "100%", top: "50%" },
+				{
+					left: "-5%", top: "25%",
+					duration: 1,
+					ease: "SlowMo.ease",
+					paused: true // Pause the animation initially
+				}
+			);
+			ScrollTrigger.create({
+				scroller: pageContainer, // locomotive-scroll
+				trigger: "#text-slider-section-pin",
+				pin: true,
+				start: "top top", // start after scrolling 50vh
+				end: "+=300%", // keep the section pinned for 300%
+				onEnter: () => {
+					animation.play();
+					gsap.to(document.querySelector('.bee-part img'), { left: '100%', duration: 5, ease: "SlowMo.ease" });
+				},
+				onLeaveBack: () => {
+					animation.reverse();
+					gsap.to(document.querySelector('.bee-part img'), { left: '-200px', duration: 5, ease: "SlowMo.ease" });
+
+				}
+			});
+		}
+		if (document.querySelector('#goContact')) {
+			const goContactSection = document.querySelector('#goContact');
+
+			// Create a ScrollTrigger instance for the section
+			ScrollTrigger.create({
+				scroller: pageContainer,
+				trigger: goContactSection,
+				start: 'top 80%',
+				
+				onEnter: () => {
+					console.log('here')
+					nav.classList.add("open");
+					setTimeout(function () {
+						navExpanded.classList.add("open");
+					}, 10);
+					// INSERT_YOUR_CODE
+
+					const xhr = new XMLHttpRequest();
+					xhr.open('GET', 'contact.php', true);
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState === 4 && xhr.status === 200) {
+							setTimeout(() => {
+								window.location.href = 'contact.php';
+							}, 2000); // 2 seconds timeout
+						}
+					};
+					xhr.send();
+				},
+				onLeaveBack: () => {
+					nav.classList.remove("open");
+					setTimeout(function () {
+						navExpanded.classList.remove("open");
+					}, 10);
+					// Add your custom function or animation here
+				},
+
+			});
 		}
 		////////////////////////////////////
 		scroller.on("call", (value) => {
@@ -566,14 +657,20 @@ window.addEventListener("load", function () {
 				event.preventDefault(); // Prevent the default action (navigation)
 				var houseNumber = this.alt.split(' ')[1]; // Get the house number from the alt attribute
 				var popin = document.getElementById('popin-house-' + houseNumber); // Get the corresponding popin
-
 				popin.style.display = 'block'; // Show the popin
+				setTimeout(() => {
+					popin.style.opacity = 1; // Show the popin
+				}, 10)
+
 			});
 			var popinCloseButtons = document.querySelectorAll('.popin-house .popin-close');
 
 			popinCloseButtons.forEach(function (button) {
 				button.addEventListener('click', function () {
-					document.querySelector('.popin-house').style.display = 'none'; // Hide the popin-house when the close button is clicked
+					document.querySelector('.popin-house').style.opacity = 0 // Show the popin
+					setTimeout(() => {
+						document.querySelector('.popin-house').style.display = 'none'; // Show the popin
+					}, 1000)
 				});
 			});
 		});
