@@ -22,7 +22,7 @@
     <link href="assets/css/app.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-color">
     <nav>
         <div class="navigation-expanded">
             <!-- <img
@@ -73,11 +73,56 @@
             <div class="border-bottom"></div>
         </div>
     </nav>
-    <!-- ICI  partie qui scrolle -->
-    <div class="bg-texture container">
-        <main>
-            
-        </main>
+    <main>
+        <section class="contact-form">
+            <div class="contact-form-part1">
+                <h1>Contactez-nous</h1>
+                <form action="/submit-your-form-handler" method="POST">
+                    <div class="input">
+
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="input">
+
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="input">
+
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">J’accepte que les informations saisies soient exploitées dans le cadre de
+                            ma demande et de la relation commerciale qui peut en découler. Pour connaître et exercer vos
+                            droits, notamment de retrait de votre consentement à l’utilisation des données collectées
+                            par ce formulaire, veuillez consulter notre politique de confidentialité.</label>
+                    </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+            <aside class="instagram-feed">
+                <img class="stamp" src="assets/img/content/stamp_evolene.png" alt="">
+                <h2>Découvrez notre compte Instagram</h2>
+                <!-- Ici, vous pouvez intégrer un widget Instagram ou une image statique -->
+                <img class="feed" src="path-to-instagram-image.jpg" alt="Instagram Feed">
+            </aside>
+        </section>
+        <img class="end-drawing" src="assets/img/content/dessin-alveoles.png" alt="">
+
+    </main>
     </div>
 </body>
 

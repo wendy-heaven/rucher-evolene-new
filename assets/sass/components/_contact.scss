@@ -1,0 +1,136 @@
+.contact-form {
+  padding: $block-margin $block-margin 0 $block-margin;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form h1 {
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 72px;
+  color: #1e0f00;
+}
+.contact-form-part1 {
+  width: 60%;
+  padding-right: 3vw;
+}
+.contact-form form .input {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form form label {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.contact-form form .input input,
+.contact-form form textarea {
+  width: calc(100% - 120px); /* Adjust width considering label */
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+/* Style de base pour le checkbox */
+.checkbox input[type="checkbox"] {
+  appearance: none; /* Supprime le style par défaut du navigateur */
+  -webkit-appearance: none; /* Supprime le style par défaut pour les navigateurs WebKit */
+  background-color: transparent; /* Fond transparent */
+  border: 2px solid black; /* Bordure noire */
+  width: 20px; /* Largeur du checkbox */
+  height: 20px; /* Hauteur du checkbox */
+  cursor: pointer; /* Curseur en forme de main pour indiquer l'interactivité */
+  position: relative; /* Position relative pour le pseudo-élément */
+  display: inline-block;
+}
+
+/* Style lorsque le checkbox est coché */
+.checkbox input[type="checkbox"]:checked {
+  background-color: black; /* Fond noir lorsque coché */
+}
+
+/* Ajout du tick blanc lorsque le checkbox est coché */
+.checkbox input[type="checkbox"]:checked::before {
+  content: "✓"; /* Caractère de coche */
+  color: white; /* Couleur blanche pour la coche */
+  position: absolute; /* Position absolue pour centrer la coche */
+  left: 4px; /* Position horizontale de la coche */
+  top: -2px; /* Position verticale de la coche */
+  font-size: 16px; /* Taille de la coche */
+}
+
+/* Style pour le label associé au checkbox pour améliorer la lisibilité et l'interaction */
+form .checkbox label {
+  margin-left: 5px; /* Espace entre le checkbox et le label */
+  cursor: pointer; /* Permet de cliquer sur le label pour cocher/décocher */
+  display: inline-block;
+  width: calc(100% - 30px);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.contact-form form textarea {
+  min-height: 150px;
+}
+.contact-form form button {
+  cursor: pointer;
+  font-size: 18px;
+  background-color: transparent;
+  appearance: none;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 1px solid #1e0f00;
+  margin-top: 40px;
+}
+
+.instagram-feed {
+  width: 40%;
+  padding-left: 3vw;
+  box-sizing: border-box;
+
+}
+
+.instagram-feed .feed {
+  width: 100%;
+  height: auto;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.checkbox input {
+  margin-right: 10px;
+}
+
+.stamp {
+  margin-top: -10;
+  margin-bottom: 20%;
+  width: 15vw;
+  transform: rotateZ(350deg);
+}
+.end-drawing {
+    width: 50vw;
+    margin: auto;
+    margin-top: 5%;
+}
