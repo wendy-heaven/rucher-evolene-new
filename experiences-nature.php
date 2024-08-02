@@ -78,7 +78,7 @@
         <main>
             <section class="link-bottom">
                 <img class="bg-img" src="assets/img/content/experiences-header.png" alt="">
-                <img class="bg-img-activities" src="assets/img/content/experiences-header.png" alt="">
+                <img class="bg-img-activities" src="assets/img/content/experiences-header-2.png" alt="">
             </section>
 
             <section class="slider-seasons">
@@ -146,7 +146,11 @@
                 </div>
             </section>
 
-
+            <section class="watercolor-section">
+                <p>Le Rucher d’Evolène est un ensemble harmonieux et concertant de raccards, chalets et hôtels dont la
+                    rénovation dans les règles de l’art sera achevée pour le Carnaval 2026 afin de pour vous recevoir
+                    dans un parfait équilibre de confort et d’authenticité.</p>
+            </section>
 
             <section id="goContact" class="link-bottom">
                 <div class="text-content">

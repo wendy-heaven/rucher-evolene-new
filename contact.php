@@ -204,7 +204,8 @@
                             <a href="lerucherdevolene"
                                 style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
                                 target="_blank">Shared post</a> on <time
-                                style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;">Time</time></p>
+                                style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;">Time</time>
+                        </p>
                     </div>
                 </blockquote>
                 <script src="https://www.instagram.com/embed.js"></script>
@@ -234,7 +235,12 @@
             </aside>
         </section>
         <img class="end-drawing" src="assets/img/content/dessin-alveoles.png" alt="">
-
+        <section id="goHome" class="link-bottom">
+            <div class="text-content">
+                <h3>Accueil</h3>
+                <img src="assets/img/content/arrow-link-black.svg" alt="">
+            </div>
+        </section>
     </main>
     </div>
 </body>

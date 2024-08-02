@@ -261,7 +261,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    animation: fade 0.5 ease infinite;
+    animation: fade 2.5s ease infinite alternate;
   }
   .text-content {
     position:  absolute; 
@@ -294,12 +294,20 @@ nav {
       color: #1e0f00;
     }
   }
+  &#goHome {
+    height: 100vh;
+    background-color:white;
+    margin-top: 10vh;
+    h3 {
+      color: #1e0f00;
+    }
+  }
 }
 @keyframes fade {
   from {
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 0.75;
   }
 }

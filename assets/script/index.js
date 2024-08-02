@@ -587,15 +587,16 @@ window.addEventListener("load", function () {
 			});
 		}
 
-		if (document.querySelector('.end-drawing')) {
-			const endDrawing = document.querySelector('.end-drawing');
+		if (document.querySelector('#goHome')) {
+			const endDrawing = document.querySelector('#goHome');
 
 			console.log(endDrawing)
 			// Create a ScrollTrigger instance for the section
 			ScrollTrigger.create({
 				scroller: pageContainer,
 				trigger: endDrawing,
-				start: 'bottom bottom',
+				start: 'top top',
+				end: 'bottom bottom',
 				onEnter: () => {
 					nav.classList.add("open");
 					setTimeout(function () {
