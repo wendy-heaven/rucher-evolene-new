@@ -2,6 +2,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", function () {
+	window.scrollTo(0, 0);
 	const loadingPage = document.getElementById('loading-page');
 	if (loadingPage) {
 		loadingPage.style.opacity = 0;
@@ -169,8 +170,9 @@ window.addEventListener("load", function () {
 			ScrollTrigger.create({
 				scroller: pageContainer, // locomotive-scroll
 				trigger: videoBlock,
-				start: "top top", // start after scrolling 50vh
-				end: "bottom top", // keep the section pinned for 300%
+				pin: true,
+				start: "top top",
+				end: "bottom top",
 				onEnter: () => {
 					document.querySelector('.border-animation').classList.add("animate")
 				},
@@ -225,7 +227,7 @@ window.addEventListener("load", function () {
 				x: '-174%',
 				y: '131%'
 			})
-				.fromTo('.light-2', { opacity: 0 }, { opacity: 1, delay: 0.5 }, "<");
+				.fromTo('.light-2', { opacity: 0 }, { opacity: 1, delay: 1.5, duration: 0.01 }, "<");
 
 			ScrollTrigger.create({
 				trigger: '#card3',
@@ -234,11 +236,11 @@ window.addEventListener("load", function () {
 				end: 'bottom bottom',
 				onEnter: () => {
 					gsap.fromTo('.light-1', { x: '-174%', y: '131%' }, { x: '24%', y: '131%' });
-					gsap.fromTo('.light-2', { opacity: 1 }, { opacity: 0 });
+					gsap.fromTo('.light-2', { opacity: 1 }, { opacity: 0, duration: 0.01 });
 				},
 				onLeaveBack: () => {
 					gsap.fromTo('.light-1', { x: '24%', y: '131%' }, { x: '-174%', y: '131%' });
-					gsap.fromTo('.light-2', { opacity: 0 }, { opacity: 1 });
+					gsap.fromTo('.light-2', { opacity: 0 }, { opacity: 1, duration: 0.01 });
 				}
 			});
 
@@ -554,7 +556,7 @@ window.addEventListener("load", function () {
 				scroller: pageContainer,
 				trigger: goContactSection,
 				start: 'top 80%',
-				
+
 				onEnter: () => {
 					console.log('here')
 					nav.classList.add("open");
@@ -569,6 +571,44 @@ window.addEventListener("load", function () {
 						if (xhr.readyState === 4 && xhr.status === 200) {
 							setTimeout(() => {
 								window.location.href = 'contact.php';
+							}, 2000); // 2 seconds timeout
+						}
+					};
+					xhr.send();
+				},
+				onLeaveBack: () => {
+					nav.classList.remove("open");
+					setTimeout(function () {
+						navExpanded.classList.remove("open");
+					}, 10);
+					// Add your custom function or animation here
+				},
+
+			});
+		}
+
+		if (document.querySelector('.end-drawing')) {
+			const endDrawing = document.querySelector('.end-drawing');
+
+			console.log(endDrawing)
+			// Create a ScrollTrigger instance for the section
+			ScrollTrigger.create({
+				scroller: pageContainer,
+				trigger: endDrawing,
+				start: 'bottom bottom',
+				onEnter: () => {
+					nav.classList.add("open");
+					setTimeout(function () {
+						navExpanded.classList.add("open");
+					}, 10);
+					// INSERT_YOUR_CODE
+
+					const xhr = new XMLHttpRequest();
+					xhr.open('GET', 'index.php', true);
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState === 4 && xhr.status === 200) {
+							setTimeout(() => {
+								window.location.href = 'index.php';
 							}, 2000); // 2 seconds timeout
 						}
 					};
@@ -675,4 +715,14 @@ window.addEventListener("load", function () {
 			});
 		});
 	}
+});
+// ... existing code ...
+window.addEventListener('unload', function () {
+	ScrollTrigger.getAll().forEach(ST => {
+		if (ST.pin) {
+			ST.unpin();
+		}
+		ST.kill();
+	});
+	scroller.destroy();
 });

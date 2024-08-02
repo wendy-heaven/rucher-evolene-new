@@ -47,7 +47,7 @@
           <li><a href="index.php">Accueil</a></li>
           <li><a href="lesmaisons.php">Les maisons</a></li>
           <li><a href="experiences-nature.php">Maison des Expériences nature</a></li>
-          <li><a href="">Le journal</a></li>
+          <!-- <li><a href="">Le journal</a></li> -->
           <li><a href="contact.php">Contact</a></li>
         </ul>
       </div>
@@ -88,7 +88,7 @@
       </div>
       <div class="video-background">
         <video playsinline loop muted autoplay>
-          <source src="assets/video/MASTER_LP_4X4.mp4" type="video/mp4" />
+          <source src="assets/video/header.mp4" type="video/mp4" />
         </video>
       </div>
     </header>
@@ -200,10 +200,10 @@
 
       <section class="panorama-scroll-block full-height" id="sectionPin">
         <div class="pin-wrap panorama-content">
-          <div class="panorama-element">
+          <div class="panorama-element js-open-popin-video" data-popin="raymonde">
             <img src="assets/img/content/pano1.png" alt="" />
           </div>
-          <div class="panorama-element">
+          <div class="panorama-element js-open-popin-video" data-popin="andre-george">
             <img src="assets/img/content/pano2.png" alt="" />
           </div>
           <div class="panorama-element">

@@ -42,7 +42,7 @@
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="lesmaisons.php">Les maisons</a></li>
                     <li><a href="experiences-nature.php">Maison des Expériences nature</a></li>
-                    <li><a href="">Le journal</a></li>
+                    <!-- <li><a href="">Le journal</a></li> -->
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
@@ -73,7 +73,7 @@
             <div class="border-bottom"></div>
         </div>
     </nav>
-    <main>
+    <main class="container">
         <section class="contact-form">
             <div class="contact-form-part1">
                 <h1>Contactez-nous</h1>

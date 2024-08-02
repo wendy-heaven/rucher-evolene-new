@@ -42,7 +42,7 @@
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="lesmaisons.php">Les maisons</a></li>
                     <li><a href="experiences-nature.php">Maison des Expériences nature</a></li>
-                    <li><a href="">Le journal</a></li>
+                    <!-- <li><a href="">Le journal</a></li> -->
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
@@ -78,7 +78,7 @@
         <main>
             <section class="link-bottom">
                 <img class="bg-img" src="assets/img/content/experiences-header.png" alt="">
-
+                <img class="bg-img-activities" src="assets/img/content/experiences-header.png" alt="">
             </section>
 
             <section class="slider-seasons">
@@ -112,7 +112,7 @@
                     <div class="panorama-element">
                         <img src="assets/img/content/panoB.png" alt="" />
                     </div>
-                    <div class="panorama-element">
+                    <div class="panorama-element js-open-popin-video" data-popin="">
                         <img src="assets/img/content/panoC.png" alt="" />
                     </div>
                     <div class="panorama-element">
