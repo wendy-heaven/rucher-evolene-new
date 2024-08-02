@@ -426,8 +426,52 @@ window.addEventListener("load", function () {
 			const container = document.querySelector('.slider-seasons');
 			const heightToScroll = window.innerHeight * 5;
 			const buttonsSeason = document.querySelectorAll('.button-season')
-			const pageContainer = document.querySelector('.container'); // Assurez-vous que .container est défini dans votre HTML
-			// Épingler la section pendant le défilement
+			const pageContainer = document.querySelector('.container');
+
+			buttonsSeason.forEach((button, index) => {
+				button.addEventListener('click', () => {
+					imagesSeason.forEach((image, imageIndex) => {
+						if (imageIndex === index) {
+							image.classList.add('active');
+							gsap.to(image, { opacity: 1, duration: 1 });
+						} else {
+							image.classList.remove('active');
+							gsap.to(image, { opacity: 0, duration: 1 });
+						}
+					});
+
+					// Update button classes
+					buttonsSeason.forEach((otherButton, buttonIndex) => {
+						if (buttonIndex === index) {
+							otherButton.classList.add('active');
+						} else {
+							otherButton.classList.remove('active');
+						}
+
+						// If the first button is active, add 'first' class to all buttons and '#text-discover'
+						if (index === 0) {
+							otherButton.classList.add('first');
+							document.getElementById("text-discover").classList.add('first');
+						} else {
+							otherButton.classList.remove('first');
+							document.getElementById("text-discover").classList.remove('first');
+						}
+					});
+
+					// Get the current step
+					const currentStep = Math.round(tlImage.scrollTrigger.progress() * totalSteps);
+
+					// Calculate the scroll position
+					const scrollPosition = index * window.innerHeight - currentStep * window.innerHeight;
+
+					// Simulate scroll
+					window.scrollTo({
+						top: scrollPosition,
+						behavior: 'smooth'
+					});
+				});
+			});
+		
 			ScrollTrigger.create({
 				scroller: pageContainer,
 				trigger: container,
