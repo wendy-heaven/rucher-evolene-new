@@ -234,12 +234,12 @@
           <div class="text-step" id="step3">
             <p style="opacity: 0;">Notre identité visuelle s’est imposée comme une évidence :
             </p>
-            <p>la dent blanche</p>
+            <p>les ailes de l’abeille</p>
           </div>
           <div class="text-step" id="step4">
             <p style="opacity: 0;">Notre identité visuelle s’est imposée comme une évidence :
             </p>
-            <p>les ailes de l’abeille</p>
+            <p>Une partie du kanji représentant le WA japonais</p>
           </div>
           <div class="text-step" id="step5">
             <p style="opacity: 0;">Notre identité visuelle s’est imposée comme une évidence :
@@ -247,11 +247,6 @@
             <p>Une partie du kanji représentant le WA japonais</p>
           </div>
           <div class="text-step" id="step6">
-            <p style="opacity: 0;">Notre identité visuelle s’est imposée comme une évidence :
-            </p>
-            <p>Une partie du kanji représentant le WA japonais</p>
-          </div>
-          <div class="text-step" id="step7">
             <p style="opacity: 0;">Notre identité visuelle s’est imposée comme une évidence :
             </p>
             <p>l’union de l’authentique et de l’excellence…</p>
@@ -262,23 +257,21 @@
             <img src="assets/img/content/step1.png" alt="Image 1">
           </div>
           <div class="image-step" id="image2">
-            <img src="assets/img/content/step2.svg" alt="Image 2">
+            <img src="assets/img/content/step2.png" alt="Image 2">
           </div>
           <div class="image-step" id="image3">
             <img src="assets/img/content/step3.png" alt="Image 3">
           </div>
           <div class="image-step" id="image4">
-            <img src="assets/img/content/step4.svg" alt="Image 4">
+            <img src="assets/img/content/step4.png" alt="Image 4">
           </div>
           <div class="image-step" id="image5">
-            <img src="assets/img/content/step5.svg" alt="Image 5">
+            <img src="assets/img/content/step5.png" alt="Image 5">
           </div>
           <div class="image-step" id="image6">
-            <img src="assets/img/content/step6.svg" alt="Image 6">
+            <img src="assets/img/content/step6.png" alt="Image 6">
           </div>
-          <div class="image-step" id="image7">
-            <img src="assets/img/content/step7.svg" alt="Image 7">
-          </div>
+          
         </div>
       </section>
 

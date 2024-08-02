@@ -112,7 +112,7 @@
                     <div class="panorama-element">
                         <img src="assets/img/content/panoB.png" alt="" />
                     </div>
-                    <div class="panorama-element js-open-popin-video" data-popin="">
+                    <div class="panorama-element js-open-popin-video" data-popin="raymonde">
                         <img src="assets/img/content/panoC.png" alt="" />
                     </div>
                     <div class="panorama-element">

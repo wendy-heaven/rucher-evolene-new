@@ -270,7 +270,7 @@ window.addEventListener("load", function () {
 			const imageSteps = document.querySelectorAll('.image-step');
 			const totalSteps = textSteps.length;
 			const container = document.getElementById('scroll-section');
-			const heightToScroll = window.innerHeight * totalSteps;
+			const heightToScroll = window.innerHeight * (totalSteps + 1);
 
 			const pageContainer = document.querySelector('.container'); // Assurez-vous que .container est défini dans votre HTML
 
@@ -311,33 +311,21 @@ window.addEventListener("load", function () {
 			textSteps.forEach((step, i) => {
 				if (i === 0) return; // Skip the first step
 				tlText.fromTo(step, { opacity: 0 }, { opacity: 1, duration: 1 }, `${i * window.innerHeight}`)
-				if (i !== 6) {
-					tlImage.to(step, { opacity: 0, duration: 1 }, `${(i + 1) * window.innerHeight}`);
-				}
+				.to(step, { opacity: 0, duration: 1 }, `${(i + 1) * window.innerHeight}`);
+				// if (i !== 6) {
+				// }
 			});
 
 			// Ajouter des animations pour chaque étape d'image
 			imageSteps.forEach((step, i) => {
-				if (i === 0) return; // Skip the first step
+				// if (i === 0) return; // Skip the first step
 				tlImage.fromTo(step, { opacity: 0 }, { opacity: 1, duration: 1 }, `${i * window.innerHeight}`)
-
-				// Ajoutez une animation de mise à l'échelle pour l'image de l'étape 1 à l'étape 2
-				if (i === 1) {
-					tlImage.to(imageSteps[0], { scale: 0.7, duration: 1, ease: 'SlowMo.ease' }, `${i * window.innerHeight}`);
-				}
-				if (i === 2) {
-					tlImage.to(imageSteps[0], { opacity: 0, duration: 1 }, `${i * window.innerHeight}`);
-				}
-				// Condition spécifique pour l'étape 7 : ne pas passer à opacité 0 lorsqu'on continue à scroller vers le bas
-				if (i !== 6) {
-					tlImage.to(step, { opacity: 0, duration: 1 }, `${(i + 1) * window.innerHeight}`);
-				}
+					.to(step, { opacity: 0, duration: 1 }, `${(i + 1) * window.innerHeight}`);
 			});
 
-			// Cas spécial pour l'étape 5 et 6
-			tlText.fromTo('#step6', { opacity: 0 }, { opacity: 1, duration: 1 }, `400vh`)
-				.to('#step6', { opacity: 0, duration: 1 }, `500vh`);
-			// Empêcher l'image de l'étape 7 de passer à opacité 0 lors du défilement vers le bas
+			// // Cas spécial pour l'étape 5 et 6
+			// tlText.fromTo('#step6', { opacity: 0 }, { opacity: 1, duration: 1 }, `400vh`)
+			// 	.to('#step6', { opacity: 0, duration: 1 }, `500vh`);
 
 
 		}
